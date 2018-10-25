@@ -1,8 +1,112 @@
 <html>
 <head>
-<title>Hello</title>
+<title>Questionnaire</title>
+<style>
+	  
+    .mainwrapper{
+      display:grid;
+      grid-template-columns:1fr 6fr ;
+      grid-auto-rows:minmax(40px, auto);
+      grid-gap:1em;
+      justify-items:stretch;
+      align-items:stretch;
+    }
+    .mainwrapper > div{
+      background:#D2D2D2;
+      padding:1em;
+  }
+    .mainwrapper > div:nth-child(1){
+      background:#FC8ADD;
+    }
+    
+    .header{
+      /*align-self:start;*/
+      grid-column:1/6;
+      grid-row:1/3;
+    }
+    
+    .tabs{
+      /*align-self:end;*/
+      grid-column:1/2;
+      grid-row:3/15;
+      display:grid;
+      padding:1em;
+    }
+    
+    .questions{
+	  grid-column:2/4;
+      grid-row:3/15;
+	}
+	
+    .fakeads{
+	  grid-column:4/6;
+      grid-row:3/15;
+      width: 270px;
+     height: 270px;
+	
+	}
+	
+	 .options{
+      /*justify-self:end;*/
+      grid-column:1/4
+      grid-row:1/8;
+      padding:1em;
+  }
+    
+ </style>
 </head>
 <body>
-<p>Hello,world.</p>
+<div class="mainwrapper">
+	<div class="header">ScrumMasterLove.com</div>
+	
+	<div class="tabs">
+		<div class="options">
+			<a href="profile.html">Profile</a>
+		</div>
+		
+		<div class="options">
+			<a href="questionnaire.html">Questionnaire</a>
+		</div>
+		
+		<div class="options">
+			<a href="matches.html">Matches</a>
+		</div>
+    </div>
+	
+	
+	
+	<div class="questions">
+		<form>
+		 <p> finish this sentence: Im looking for... </p>
+		  <input type="radio" name="preference" value="male" checked> a male<br>
+		  <input type="radio" name="preference" value="female" > a female<br>
+		  <input type="radio" name="preference" value="either"> either a male or female<br>
+		</form>
+
+		<form>
+		 <p> What type of methodology do you prefer? </p>
+		  <input type="radio" name="methodology" value="Waterfall" checked> Waterfall<br>
+		  <input type="radio" name="methodology" value="Agile" > Agile<br>
+		  <input type="radio" name="methodology" value="Lean"> Lean<br>
+		  <input type="radio" name="methodology" value="SixSigma"> Six Sigma<br>
+		</form>
+
+		<form>
+		 <p> What sentence best describe you? </p>
+		  <input type="radio" name="description" value="pinacolada" checked> I like Pina Coladas<br>
+		  <input type="radio" name="description" value="rain" >I like getting caught in the rain<br>
+		  <input type="radio" name="description" value="yoga"> I'm not into yoga <br>
+		  <input type="radio" name="description" value="brain">I have half a brain<br>
+		</form>
+
+		<form>
+		 <p> Did you get your flu shot this year? </p>
+		  <input type="radio" name="health" value="yes" checked> Yes<br>
+		  <input type="radio" name="health" value="no" > No<br>
+		</form>
+	</div>	
+	<img  class="fakeads" src="fakeAd.jpg">
+	
+	</div>	
 </body>
 </html>
