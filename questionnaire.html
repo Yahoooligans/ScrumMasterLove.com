@@ -1,82 +1,61 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Questionnaire</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="http://code.jquery.com/jquery-2.2.1.js"></script>
+<script src="questionnaire.js"></script>
+	<title>Sign up</title>
+
+
 <style>
-	  
-    .mainwrapper{
-      display:grid;
-      grid-template-columns:1fr 6fr ;
-      grid-auto-rows:minmax(40px, auto);
-      grid-gap:1em;
-      justify-items:stretch;
-      align-items:stretch;
-    }
-    .mainwrapper > div{
-      background:#D2D2D2;
-      padding:1em;
-  }
-    .mainwrapper > div:nth-child(1){
-      background:#FC8ADD;
-    }
-    
-    .header{
-      /*align-self:start;*/
-      grid-column:1/6;
-      grid-row:1/3;
-    }
-    
-    .tabs{
-      /*align-self:end;*/
-      grid-column:1/2;
-      grid-row:3/15;
-      display:grid;
-      padding:1em;
-    }
-    
-    .questions{
-	  grid-column:2/4;
-      grid-row:3/15;
-	}
-	
-    .fakeads{
-	  grid-column:4/6;
-      grid-row:3/15;
-      width: 270px;
-     height: 270px;
-	
-	}
-	
-	 .options{
-      /*justify-self:end;*/
-      grid-column:1/4
-      grid-row:1/8;
-      padding:1em;
-  }
-    
- </style>
+body {font-family: verdana, Helvetica, sans-serif;
+background-color: lightblue; padding: 20px;}
+h1 {font-family: Big Caslon; font-size: 45px; }
+
+
+</style>
 </head>
 <body>
-<div class="mainwrapper">
-	<div class="header">ScrumMasterLove.com</div>
-	
-	<div class="tabs">
-		<div class="options">
-			<a href="profile.html">Profile</a>
-		</div>
-		
-		<div class="options">
-			<a href="questionnaire.html">Questionnaire</a>
-		</div>
-		
-		<div class="options">
-			<a href="matches.html">Matches</a>
-		</div>
-    </div>
-	
-	
-	
-	<div class="questions">
-		<form method="post" >
+
+<div class="w3-container w3-blue">
+<h1> Welcome to Scrum Master Love.com </h1>
+</div>
+
+ <h2> Please complete the following to make an account </h2>
+ 
+
+<form id = "loginform" class="form-inline" method="post">
+		  <label for="name">Name:</label>
+		  <p>
+		  <input type="name" id="name" placeholder="Enter full name" name="name">
+		  <p>
+		  <label for="username">User name:</label>
+		  <p>
+		  <input type="username" id="name" placeholder="Enter user name" name="username">
+		  <p> 
+		  <label for="dob">Birthday:</label>
+		  <p>
+		  <input type="dob" id="dob" placeholder="Enter mm/dd/yy" name="dob">
+		  <p>  
+		  <label for="age">Age:</label>
+		  <p>
+		  <input type="age" id="age" placeholder="Enter your age" name="age">
+		  <p> 
+		  <label for="email">Email:</label>
+		  <p>
+		  <input type="email" id="email" placeholder="Enter email" name="email">
+		  <p>
+		  <label for="pwd">Password:</label>
+		  <p>
+		  <input type="password" id="pwd" placeholder="Enter password" name="pswd">
+		  <p>
+		  <label for="gender">Gender:</label>
+		  <p>
+		  <input type="radio" name="gender" id="gender" > Female<br>
+		  <input type="radio" name="gender" id="gender" > Male<br>
+		  <input type="radio" name="gender" id="gender" > Prefer not to answer<br>
+		  <p>
 
 		 <p>  What is the best methodology? </p>
 		  <input type="radio" name="methodology" value=1 checked > Agile Scrum<br>
@@ -136,13 +115,10 @@
 		  <input type="radio" name="scenario2" value=2 >Assist them in any way that you can except for doing their job<br>
 		  <input type="radio" name="scenario2" value=3>Give them a motivational speech and tell them to get back to work <br>
 		  <input type="radio" name="scenario2" value=4> Extend the sprint for the entire team<br>
-		  
-		</form>
-		<button onclick="submitFunction()">Submit</button>
-	</div>	
-	<img  class="fakeads" src="fakeAd.jpg">
-	</div>
-
-		
+		  <br>
+	
+  <input type="button" value="Submit" id="submit" onclick="validate()"/>
+</form>
+  
 </body>
 </html>
