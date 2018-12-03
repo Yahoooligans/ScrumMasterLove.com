@@ -12,6 +12,14 @@ background-color: lightblue;}
 
 h1 {font-family: Big Caslon; font-size: 45px;}
 
+div.a {text-align: right;
+		margin: 15px 100px 5px 0;}
+
+a {color: dodgerblue;}
+
+a:hover {color: blue;}
+  
+  
 * {box-sizing: border-box;}
 
 .form-inline { 
@@ -45,11 +53,6 @@ h1 {font-family: Big Caslon; font-size: 45px;}
 .form-inline button:hover {
   background-color: royalblue;
 }
-
-@media (max-width: 800px) {
-  .form-inline input {
-    margin: 10px 0;
-  }
   
   .form-inline {
     flex-direction: column;
@@ -72,12 +75,10 @@ h1 {font-family: Big Caslon; font-size: 45px;}
   <p>
   <input type="password" id="pwd" placeholder="Enter password" name="pswd">
   <p>
-  <label>
-    <input type="checkbox" name="remember"> Remember me
-  </label>
-  <p>
   <input type="button" value="Login" id="submit" onclick="validate()"/>
 </form>
-  <a href = "/questionare.html"> Sign Up </a>
+  <div class = "a">
+<a href = "C:/CU/Comp%20Sci/Software/Project%20Code/matches.html"> Sign Up </a>
+</div>
 </body>
 </html>
