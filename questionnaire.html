@@ -52,9 +52,9 @@ h1 {font-family: Big Caslon; font-size: 45px; }
 		  <p>
 		  <label for="gender">Gender:</label>
 		  <p>
-		  <input type="radio" name="gender" id="gender" > Female<br>
-		  <input type="radio" name="gender" id="gender" > Male<br>
-		  <input type="radio" name="gender" id="gender" > Prefer not to answer<br>
+		  <input type="radio" name="gender" id="gender" value="female"> Female<br>
+		  <input type="radio" name="gender" id="gender" value="male"> Male<br>
+		  <input type="radio" name="gender" id="gender" value="na"> Prefer not to answer<br>
 		  <p>
 
 		 <p>  What is the best methodology? </p>
@@ -117,7 +117,7 @@ h1 {font-family: Big Caslon; font-size: 45px; }
 		  <input type="radio" name="scenario2" value=4> Extend the sprint for the entire team<br>
 		  <br>
 	
-  <input type="button" value="Submit" id="submit" onclick="validate()"/>
+  <input type="button" value="Submit" id="submit" onclick="submit()"/>
 </form>
   
 </body>
