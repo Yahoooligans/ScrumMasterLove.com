@@ -1,4 +1,4 @@
-function CalculateScore(answer_set){
+function CalculateScore(users,answer_set){
 	var score;
 	for(i=0;i<answer_set.length;i++){
 		if(answers[i]=="a"){
