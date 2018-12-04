@@ -32,12 +32,17 @@ app.use(session({
 app.use(flash());
 
 
-var index = require('./routes/index');
-var profile = require('./routes/profile');
-var matches = require('./routes/matches')
+var index       = require('./routes/index');
+//var login       = require('./routes/login');
+//var matches     = require('./routes/matches');
+var profile     = require('./routes/profile');
+//var register    = require('./routes/register');
+
 app.use('/', index);
+//app.use('/login', login);
+//app.use('/matches', matches);
 app.use('/profile', profile);
-app.use('/matches', matches);
+//app.use('/register', register);
 
 
 var port = 4000;
