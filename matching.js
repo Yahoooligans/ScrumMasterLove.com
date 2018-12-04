@@ -1,3 +1,52 @@
+
+var express = require('express');
+var db = require('../database');
+var app = express();
+module.exports = app;
+
+app.get('/', function (request, response) {
+
+    // TODO: Initialize the query variable with a SQL query
+    // that returns all the rows in the ‘store’ table
+    var query = 'SELECT * FROM users';
+    var query2 = 'SELECT * FROM answer_set';
+
+    db.any(query)
+        .then(function (rows) {
+            // render views/store/list.ejs template file
+            response.render('profile/list', {
+                title: 'Profile',
+                data: rows
+            })
+        })
+        .catch(function (err) {
+            // display error message in case an error
+            request.flash('error', err);
+            response.render('profile/list', {
+                title: 'Profile',
+                data: ''
+            })
+        })
+
+      db.any(query2)
+        .then(function (rows) {
+            // render views/store/list.ejs template file
+            response.render('answer/list', {
+                title: 'Answers',
+                data: rows
+            })
+        })
+        .catch(function (err) {
+            // display error message in case an error
+            request.flash('error', err);
+            response.render('answer/list', {
+                title: 'Answers',
+                data: ''
+            })
+        })
+ 
+});
+
 function CalculateScore(users,answer_set){
 	var score;
 	for(i=0;i<answer_set.length;i++){
@@ -14,7 +63,7 @@ function CalculateScore(users,answer_set){
 			score += 4;
 		}
 	}
-	return score
+	return score;
 }
 
 function match(score,answer_set){
