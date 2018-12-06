@@ -34,10 +34,10 @@ app.use(flash());
 
 var index = require('./routes/index');
 var profile = require('./routes/profile');
-var matches = require('./routes/matches')
+var questionnaire = require('./routes/questionnaire')
 app.use('/', index);
 app.use('/profile', profile);
-app.use('/matches', matches);
+app.use('/questionnaire', questionnaire);
 
 
 var port = 4000;
