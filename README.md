@@ -6,7 +6,7 @@ To bring an easy and efficient way to bring love into scrum master’s lives.
 
 ## Scrum Masters
 - Chase Dudas
-- Marissa
+- Marissa Montano
 - Bridget Murphy
 - Cort Sharp
 - Trevor Buck
