@@ -5,7 +5,7 @@
   "main": "login.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha"
+    "test": "mocha --exit"
   },
   "keywords": [],
   "author": "",
