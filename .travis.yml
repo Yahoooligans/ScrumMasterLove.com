@@ -12,5 +12,8 @@ cache:
 install:
   - npm install
   
+services:
+  - postgresql
+  
 after_script:
   - curl http://localhost:4000/close
