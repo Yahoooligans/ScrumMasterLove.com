@@ -2,7 +2,7 @@ CREATE DATABASE scrumlove;
 \c scrumlove;
 
 CREATE TABLE "users" (
-  "id" integer PRIMARY KEY AUTOINCREMENT,
+  "id" serial PRIMARY KEY,
   "answer_set_id" integer,
   "matches_id" integer,
   "full_name" varchar,
@@ -15,7 +15,7 @@ CREATE TABLE "users" (
 );
 
 CREATE TABLE "answer_set" (
-  "id" integer PRIMARY KEY AUTOINCREMENT,
+  "id" serial PRIMARY KEY,
   "q1" varchar,
   "q2" varchar,
   "q3" varchar,
@@ -30,7 +30,7 @@ CREATE TABLE "answer_set" (
 );
 
 CREATE TABLE "matches" (
-  "id" integer PRIMARY KEY AUTOINCREMENT,
+  "id" serial PRIMARY KEY,
   "match1" integer,
   "match2" integer,
   "match3" integer,
