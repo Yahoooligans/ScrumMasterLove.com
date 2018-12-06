@@ -1,4 +1,4 @@
-## ScrumMasterLove.com
+# ScrumMasterLove.com
 Love...the only thing you could ever need. Our project aims to connect scrum masters to other scrum masters through a website based matching system. The user creates a profile and gets matched with other users bases on simple preferences.
 
 ## Our mission
@@ -6,18 +6,17 @@ To bring an easy and efficient way to bring love into scrum master’s lives.
 
 ## Build status
 [![Build Status](https://travis-ci.org/Yahoooligans/ScrumMasterLove.com.svg?branch=master)](https://travis-ci.org/Yahoooligans/ScrumMasterLove.com)
-
-## Code style
-If you're using any code style like xo, standard etc. That will help others while contributing to your project. Ex. -
-
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
  
 ## Screenshots
 Include logo/demo screenshot etc.
 
 ## Tech/framework used
 <b>Built with</b>
-- [Electron](https://electron.atom.io)
+- [NodeJS]
+- [JavaScript]
+- [PostgreSQL]
+<b>Framework</b>
+- [Express]
 
 ## Features
 What makes your project stand out?
