@@ -2,7 +2,7 @@ CREATE DATABASE scrumlove;
 \c scrumlove;
 
 CREATE TABLE "users" (
-  "id" integer PRIMARY KEY,
+  "id" integer PRIMARY KEY AUTOINCREMENT,
   "answer_set_id" integer,
   "matches_id" integer,
   "full_name" varchar,
@@ -15,7 +15,7 @@ CREATE TABLE "users" (
 );
 
 CREATE TABLE "answer_set" (
-  "id" integer PRIMARY KEY,
+  "id" integer PRIMARY KEY AUTOINCREMENT,
   "q1" varchar,
   "q2" varchar,
   "q3" varchar,
@@ -30,7 +30,7 @@ CREATE TABLE "answer_set" (
 );
 
 CREATE TABLE "matches" (
-  "id" integer PRIMARY KEY,
+  "id" integer PRIMARY KEY AUTOINCREMENT,
   "match1" integer,
   "match2" integer,
   "match3" integer,
@@ -48,7 +48,7 @@ VALUES(1,1,1,'Chase Dudas','chase.dudas@colorado.edu','chase13','chase13','male'
 (2,2,2, 'Marissa Montano', 'marissa.montano@colorado.edu', 'mamo0245', 'mamo0245','female', '01/04/98','20'),
 (3,3,3, 'Bridget Murphy','bridget.murphy@colorado.edu','brmu8861','brmu8861','female','03/04/96','22'),
 (4,4,4,'Cort Sharp', 'cort.sharp@colorado.edu', 'cosh9552', 'cosh9552', 'male', '04/03/96', '22'),
-(5,5,5, 'Trevor Buck', 'trbu4810@colorado.edu', 'Trevor4Ever', 'Trevor4Ever', 'male', '07/03/1995', '23')
+(5,5,5, 'Trevor Buck', 'trbu4810@colorado.edu', 'Trevor4Ever', 'Trevor4Ever', 'male', '07/03/95', '23')
 ;
 
 INSERT INTO ANSWER_SET
