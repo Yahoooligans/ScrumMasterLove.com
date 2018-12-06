@@ -4,6 +4,13 @@ Love...the only thing you could ever need. Our project aims to connect scrum mas
 ## Our mission
 To bring an easy and efficient way to bring love into scrum master’s lives.
 
+## Scrum Masters
+- Chase Dudas
+- Marissa
+- Bridget Murphy
+- Cort Sharp
+- Trevor Buck
+
 ## Build status
 [![Build Status](https://travis-ci.org/Yahoooligans/ScrumMasterLove.com.svg?branch=master)](https://travis-ci.org/Yahoooligans/ScrumMasterLove.com)
  
