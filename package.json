@@ -4,10 +4,7 @@
   "description": "",
   "main": "login.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
-    "test": "make test"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
