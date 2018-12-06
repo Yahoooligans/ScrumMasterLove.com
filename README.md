@@ -5,9 +5,7 @@ Love...the only thing you could ever need. Our project aims to connect scrum mas
 To bring an easy and efficient way to bring love into scrum master’s lives.
 
 ## Build status
-Build status of continus integration i.e. travis, appveyor etc. Ex. - 
-
-[![Build Status]([![Build Status](https://travis-ci.org/Yahoooligans/ScrumMasterLove.com.svg?branch=master)](https://travis-ci.org/Yahoooligans/ScrumMasterLove.com))
+[![Build Status](https://travis-ci.org/Yahoooligans/ScrumMasterLove.com.svg?branch=master)](https://travis-ci.org/Yahoooligans/ScrumMasterLove.com)
 
 ## Code style
 If you're using any code style like xo, standard etc. That will help others while contributing to your project. Ex. -
