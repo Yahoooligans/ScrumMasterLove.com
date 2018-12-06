@@ -9,3 +9,13 @@ node_js:
 cache:
   directories:
     - "node_modules"
+    
+install:
+  - npm install
+  
+services:
+  - postgresql
+  
+after_script:
+  - curl http://localhost:4000/close
+
