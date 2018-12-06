@@ -3,9 +3,9 @@ var request = require('supertest');
 var express = require('express');
 var app = express();
 
-describe('Basic Functionality', function() 
+describe('Unit Test For ScrumMasterLove', function() 
 {
-	describe('Server.js', function()
+	describe('Testing - Server.js', function()
 	{
 		it('Should respond with hello world', function() 
   		{

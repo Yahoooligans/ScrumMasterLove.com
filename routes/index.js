@@ -6,4 +6,5 @@ app.get('/', function (request, response) {
    response.render('index', {title: 'Scrum Lovin'})
 });
 
+
 module.exports = app;

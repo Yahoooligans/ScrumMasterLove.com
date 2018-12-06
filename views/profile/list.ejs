@@ -19,6 +19,7 @@
         <th>Email</th>
         <th>Username</th>
         <th>Name</th>
+        <th>Edit</th>
     </tr>
     <% if (data) { %>
     <!-- Using a for-loop to loop over each row in the database.
@@ -27,7 +28,12 @@
             <tr>
                 <td><%= item.email %></td>
                 <td><%= item.user_name %></td>
-                <td><%= item.full_name %></td>
+                <td><%= item.full_name %></td> 
+                <td>
+                    <div class="edit-delete" style="float:left">
+                    <a href='/profile/edit/<%= item.id %>'>Edit</a> &nbsp;
+                    </div>
+                </td>
             </tr>
         <% }) %>
     <% } %>
