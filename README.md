@@ -31,13 +31,20 @@ Include logo/demo screenshot etc.
  - [Slack]
  
 ## Features
-What makes your project stand out?
+What really sets apart from other trash dating sites, like Christian Mingle or Tinder, is our dynamic login page in the navigation bar of the web app. We are commited to making sure our scrum masters are happy with the features we have to offer. We are a feedback inspired development team so our users matter alot to us. 
 
 ## Code Example
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
 ## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
+
+1. Download by hitting that green button 
+2. Open your terminal (or any similar command line looking thing)
+3. Type cd /Downloads/ScrumMasterLover.com-master
+4. Type ```npm install```
+5. Type ```node server.js```
+6. Go to a web browser (Google Chrome bc it is superior) and type http://localhost:4000/ in the address bar
+7. Enjoy!
 
 ## API Reference
 
