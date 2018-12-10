@@ -40,6 +40,7 @@ CREATE TABLE "users" (
   "password" varchar UNIQUE,
   "gender" varchar,
   "age" varchar
+  "score" REFERENCES answer_set(score)
 );
 
 INSERT INTO ANSWER_SET (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, score)
