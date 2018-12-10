@@ -1,31 +1,18 @@
 CREATE DATABASE scrumlove;
 \c scrumlove;
 
-CREATE TABLE "users" (
-  "id" serial PRIMARY KEY,
-  "answer_set_id" integer,
-  "matches_id" integer,
-  "full_name" varchar,
-  "email" varchar UNIQUE,
-  "user_name" varchar UNIQUE,
-  "password" varchar UNIQUE,
-  "gender" varchar,
-  "date_of_birth" varchar,
-  "age" integer
-);
-
 CREATE TABLE "answer_set" (
   "id" serial PRIMARY KEY,
-  "q1" varchar,
-  "q2" varchar,
-  "q3" varchar,
-  "q4" varchar,
-  "q5" varchar,
-  "q6" varchar,
-  "q7" varchar,
-  "q8" varchar,
-  "q9" varchar,
-  "q10" varchar,
+  "q1" integer,
+  "q2" integer,
+  "q3" integer,
+  "q4" integer,
+  "q5" integer,
+  "q6" integer,
+  "q7" integer,
+  "q8" integer,
+  "q9" integer,
+  "q10" integer,
   "score" integer
 );
 
@@ -43,35 +30,38 @@ CREATE TABLE "matches" (
   "match10" integer
 );
 
-INSERT INTO USERS
-VALUES(1,1,1,'Chase Dudas','chase.dudas@colorado.edu','chase13','chase13','male','10/27/98','20'),
-(2,2,2, 'Marissa Montano', 'marissa.montano@colorado.edu', 'mamo0245', 'mamo0245','female', '01/04/98','20'),
-(3,3,3, 'Bridget Murphy','bridget.murphy@colorado.edu','brmu8861','brmu8861','female','03/04/96','22'),
-(4,4,4,'Cort Sharp', 'cort.sharp@colorado.edu', 'cosh9552', 'cosh9552', 'male', '04/03/96', '22'),
-(5,5,5, 'Trevor Buck', 'trbu4810@colorado.edu', 'Trevor4Ever', 'Trevor4Ever', 'male', '07/03/95', '23')
+CREATE TABLE "users" (
+  "id" serial PRIMARY KEY,
+  "answer_set_id" integer REFERENCES answer_set(id),
+  "matches_id" integer REFERENCES matches(id),
+  "full_name" varchar, 
+  "email" varchar UNIQUE,
+  "user_name" varchar UNIQUE,
+  "password" varchar UNIQUE,
+  "gender" varchar,
+  "age" varchar
+);
+
+INSERT INTO ANSWER_SET (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, score)
+VALUES(1,1,3,3,4,1,1,1,1,2,18),
+(2, 2, 1, 3, 1, 1, 2, 1, 2, 1, 16),
+(1, 1, 3, 2, 1, 2, 2, 2, 1, 2, 17),
+(1,1,3,2,1,4,2,2,3,4,23),
+(1,1,3,2,1,4,2,2,3,4,23)
 ;
 
-INSERT INTO ANSWER_SET
-VALUES(1,'a','a','c','c','d','a','a','a','','',0),
-(2, 'b', 'b', 'a', 'c', 'a', 'a', 'b', 'a','','', 0),
-(3, 'a','a','c','b','a','d','b','b','','',0),
-(4, 'a','a','c','b','a','d','b','b','','',0),
-(5, 'a','a','c','b','a','d','b','b','','',0)
-;
-
-INSERT INTO MATCHES(id)
+INSERT INTO MATCHES (match1)
 VALUES(1),
-(2),
-(3),
+(1),
+(1),
 (4),
-(5)
+(3)
 ;
 
-SELECT * 
-FROM USERS;
-
-SELECT *
-FROM ANSWER_SET;
-
-SELECT *
-FROM MATCHES;
+INSERT INTO USERS (full_name, email, user_name, password, gender, age)
+VALUES('Chase Dudas','chase.dudas@colorado.edu','chase13','chase13','male','20'),
+('Marissa Montano', 'marissa.montano@colorado.edu', 'mamo0245', 'mamo0245','female','20'),
+('Bridget Murphy','bridget.murphy@colorado.edu','brmu8861','brmu8861','female','22'),
+('Cort Sharp', 'cort.sharp@colorado.edu', 'cosh9552', 'cosh9552', 'male', '22'),
+('Trevor Buck', 'trbu4810@colorado.edu', 'Trevor4Ever', 'Trevor4Ever', 'male', '23')
+;
