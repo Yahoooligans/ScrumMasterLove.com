@@ -1,5 +1,3 @@
-/*
-//This is profile.js, need to make chaneges to handle matches
 var express = require('express');
 var db = require('../database');
 var app = express();
@@ -14,18 +12,17 @@ app.get('/', function (request, response) {
     db.any(query)
         .then(function (rows) {
             // render views/store/list.ejs template file
-            response.render('profile/list', {
-                title: 'Profile',
+            response.render('matches/list', {
+                title: 'Matches',
                 data: rows
             })
         })
         .catch(function (err) {
             // display error message in case an error
             request.flash('error', err);
-            response.render('profile/list', {
-                title: 'Profile',
+            response.render('matches/list', {
+                title: 'Matches',
                 data: ''
             })
         })
 });
-*/

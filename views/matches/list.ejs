@@ -1,5 +1,3 @@
-<!-- This is profile's index.ejs-->
-
 <!--Including Header Partial-->
 <%- include ../layouts/header.ejs %>
 
@@ -18,22 +16,19 @@
 
 <table border="0" width='60%'>
     <tr style='text-align:left; background-color:#CCC'>
-        <th>Email</th>
         <th>Username</th>
-        <th>Name</th>
     </tr>
     <% if (data) { %>
     <!-- Using a for-loop to loop over each row in the database.
     The 'data' variable is passed from the store.js during the response.render function call -->
         <% data.forEach(function(item){ %>
             <tr>
-                <td><%= item.email %></td>
                 <td><%= item.user_name %></td>
-                <td><%= item.full_name %></td>
             </tr>
         <% }) %>
     <% } %>
 </table>
+
 
 
 <!--Including Footer Partial-->
