@@ -12,8 +12,7 @@ CREATE TABLE "answer_set" (
   "q7" integer,
   "q8" integer,
   "q9" integer,
-  "q10" integer,
-  "score" integer
+  "q10" integer
 );
 
 CREATE TABLE "matches" (
@@ -39,16 +38,16 @@ CREATE TABLE "users" (
   "user_name" varchar UNIQUE,
   "password" varchar UNIQUE,
   "gender" varchar,
-  "age" varchar
-  "score" REFERENCES answer_set(score)
+  "age" varchar,
+  "score" integer 
 );
 
-INSERT INTO ANSWER_SET (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, score)
-VALUES(1,1,3,3,4,1,1,1,1,2,18),
-(2, 2, 1, 3, 1, 1, 2, 1, 2, 1, 16),
-(1, 1, 3, 2, 1, 2, 2, 2, 1, 2, 17),
-(1,1,3,2,1,4,2,2,3,4,23),
-(1,1,3,2,1,4,2,2,3,4,23)
+INSERT INTO ANSWER_SET (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
+VALUES(1,1,3,3,4,1,1,1,1,2),
+(2, 2, 1, 3, 1, 1, 2, 1, 2, 1),
+(1, 1, 3, 2, 1, 2, 2, 2, 1, 2),
+(1,1,3,2,1,4,2,2,3,4),
+(1,1,3,2,1,4,2,2,3,4)
 ;
 
 INSERT INTO MATCHES (match1)
@@ -59,10 +58,10 @@ VALUES(1),
 (3)
 ;
 
-INSERT INTO USERS (full_name, email, user_name, password, gender, age)
-VALUES('Chase Dudas','chase.dudas@colorado.edu','chase13','chase13','male','20'),
-('Marissa Montano', 'marissa.montano@colorado.edu', 'mamo0245', 'mamo0245','female','20'),
-('Bridget Murphy','bridget.murphy@colorado.edu','brmu8861','brmu8861','female','22'),
-('Cort Sharp', 'cort.sharp@colorado.edu', 'cosh9552', 'cosh9552', 'male', '22'),
-('Trevor Buck', 'trbu4810@colorado.edu', 'Trevor4Ever', 'Trevor4Ever', 'male', '23')
+INSERT INTO USERS (full_name, email, user_name, password, gender, age, score)
+VALUES('Chase Dudas','chase.dudas@colorado.edu','chase13','chase13','male','20', 18),
+('Marissa Montano', 'marissa.montano@colorado.edu', 'mamo0245', 'mamo0245','female','20', 16),
+('Bridget Murphy','bridget.murphy@colorado.edu','brmu8861','brmu8861','female','22', 17),
+('Cort Sharp', 'cort.sharp@colorado.edu', 'cosh9552', 'cosh9552', 'male', '22', 23),
+('Trevor Buck', 'trbu4810@colorado.edu', 'Trevor4Ever', 'Trevor4Ever', 'male', '23', 23)
 ;
