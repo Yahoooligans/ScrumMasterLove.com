@@ -4,12 +4,11 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<script src="http://code.jquery.com/jquery-2.2.1.js"></script>
-<script src="login.js"></script>
 <style>
 
 body {font-family: verdana, Helvetica, sans-serif;
-background-color: lightblue;}
+background-color: lightblue;
+color: black;}
 
 h1 {font-family: Big Caslon; font-size: 45px;}
 
@@ -19,8 +18,11 @@ div.a {text-align: right;
 a {color: dodgerblue;}
 
 a:hover {color: blue;}
-  
-  
+
+img {float: left;
+	width: 60%;
+	height: 100%;}
+
 * {box-sizing: border-box;}
 
 .form-inline { 
@@ -65,9 +67,11 @@ a:hover {color: blue;}
 <body>
 
 <div class="w3-container w3-blue">
-<h1>Scrum Master Love.com </h1>
+<h1> Scrum Master Love.com </h1>
 </div>
-<form id = "loginform" class="form-inline" method="post">
+<img src="https://cdn.dribbble.com/users/5976/screenshots/1669486/digital_love_geometric_heart_logo_design_symbol_by_alex_tass.jpg"
+alt="Digital Love">
+<form class="form-inline" action="/login.js">
   <label for="email">Email:</label>
   <p>
   <input type="email" id="email" placeholder="Enter email" name="email">
@@ -76,9 +80,11 @@ a:hover {color: blue;}
   <p>
   <input type="password" id="pwd" placeholder="Enter password" name="pswd">
   <p>
-  <input type="button" value="Login" id="submit" onclick="validate()"/>
+  <button type="submit">Submit</button>
+  <p>
+  
 </form>
-  <div class = "a">
+<div class = "a">
 <a href = "/questionare.html"> Sign Up </a>
 </div>
 </body>
