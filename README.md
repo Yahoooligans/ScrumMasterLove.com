@@ -26,7 +26,7 @@ Include logo/demo screenshot etc.
 <b>Framework</b>
 - [Express]
 
-<b>Project Management<b>
+<b>Project Management</b>
  - [ClickUp]
  - [Slack]
  
