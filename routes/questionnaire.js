@@ -73,7 +73,6 @@ var errors = request.validationErrors();
         // Running SQL query to insert data into the store table
         db.none('INSERT INTO users(full_name, user_name, age, email, password, gender) VALUES($1, $2, $3, $4, $5, $6)', [item.full_name, item.user_name, item.age, item.email, item.password, item.gender])
         db.none('INSERT INTO answer_set(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)', [item.q1, item.q2, item.q3, item.q4, item.q5, item.q6, item.q7, item.q8, item.q9, item.q10])
-	db.none('UPDATE users SET score=$1 WHERE id IN(SELECT max(id) FROM users)', [parseInt(item.q1)+parseInt(item.q2)+parseInt(item.q3)+parseInt(item.q4)+parseInt(item.q5)+parseInt(item.q6)+parseInt(item.q7)+parseInt(item.q8)+parseInt(item.q9)+parseInt(item.q10)])
 	 .then(function (result) {
                 request.flash('success', 'Successfully created a user!');
                 // render to profile
@@ -117,8 +116,8 @@ var errors = request.validationErrors();
         	q8: item.q8,
 	        q9: item.q9,
         	q10: item.q10})
-	})
 
+	})
 	}
      else {
         var error_msg = errors.reduce((accumulator, current_error) => accumulator + '<br />' + current_error.msg, '');
