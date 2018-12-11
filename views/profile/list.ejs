@@ -1,39 +1,75 @@
-<!--Including Header Partial-->
-<%- include ../layouts/header.ejs %>
 
-<!--Using if-check to see if an error occurred and displaying appropriate message-->
-<% if (messages.error) { %>
-    <p style="color:red"><%- messages.error %></p>
-<% } %>
-<% if (messages.success) { %>
-    <p style="color:blue"><%- messages.success %></p>
-<% } %>
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<title>Scrum Master Love.com</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: verdana, Helvetica, sans-serif;
+background-color: lightblue;}
+h1 {font-family: Big Caslon; font-size: 45px;}
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2291ff;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+.sidenav a:hover{
+    color: gray;
+}
+.main {
+    margin-left: 200px; 
+    font-size: 28px;
+    padding: 0px 10px;
+}
+</style>
+</head>
+<body>
 
-<script type="text/javascript">
-    var err = <%- JSON.stringify(messages) %>;
-    console.log(err);
-</script>
+<div class="w3-container w3-blue">
+<h1><p align = "Center"> My Profile</p></h1>
+</div>
 
-<table border="0" width='60%'>
-    <tr style='text-align:left; background-color:#CCC'>
-        <th>Email</th>
-        <th>Username</th>
-        <th>Name</th>
-    </tr>
-    <% if (data) { %>
-    <!-- Using a for-loop to loop over each row in the database.
-    The 'data' variable is passed from the store.js during the response.render function call -->
-        <% data.forEach(function(item){ %>
-            <tr>
-                <td><%= item.email %></td>
-                <td><%= item.user_name %></td>
-                <td><%= item.full_name %></td>
-            </tr>
-        <% }) %>
-    <% } %>
-</table>
+<div class="sidenav">
+  <p> View your matches here </p>
+  <a href="/matches">Matches</a>
+  <br>
+  <br>
+<!--  <a href="/questionnaire">Questionnare</a>  -->
+  <br>
+  <br>
+  <a href="/">Logout</a>
+</div>
+
+<div class="main">
+
+  <% if (data) { %>
+    <% data.forEach(function(item) { %>
+      <% if(item.id == 3) {%>
+        <p> Name: <%= item.full_name %></p>
+        <p> Email: <%= item.email %></p>
+        <p> Age: <%= item.age %></p>
+      <% } %>
+    <% } ) %>
+  <% } %>
+
+<p> Description here </p>
+</div>
 
 
-
-<!--Including Footer Partial-->
-<%- include ../layouts/footer.ejs %>
+</body>
+</html>

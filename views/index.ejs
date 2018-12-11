@@ -1,6 +1,80 @@
-<!--Including Header Partial-->
-<%- include layouts/header.ejs %>
 
+<!DOCTYPE html>
+<html>
+<title>Scrum Master Love.com</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: verdana, Helvetica, sans-serif;
+background-color: lightblue;
+color: black;}
+h1 {font-family: Big Caslon; font-size: 45px;}
+div.a {text-align: right;
+		margin: 15px 100px 5px 0;}
+a {color: dodgerblue;}
+a:hover {color: blue;}
+img {float: left;
+	width: 60%;
+	height: 100%;}
+* {box-sizing: border-box;}
+.form-inline { 
+  text-align: right;
+  display: vertical-align;
+  align-items: center;
+  margin: 15px 100px 5px 0;
+  
+}
+.form-inline label {
+  margin: 15px 100px 5px 0;
+}
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+.form-inline button:hover {
+  background-color: royalblue;
+}
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+</style>
+</head>
+<body>
 
-<!--Including Footer Partial-->
-<%- include layouts/footer.ejs %>
+<div class="w3-container w3-blue">
+<h1> Scrum Master Love.com </h1>
+</div>
+<img src="https://cdn.dribbble.com/users/5976/screenshots/1669486/digital_love_geometric_heart_logo_design_symbol_by_alex_tass.jpg"
+alt="Digital Love">
+<form class="form-inline" action="/profile">
+  <label for="email">Email:</label>
+  <p>
+  <input type="email" id="email" placeholder="Enter email" name="email">
+  <p>
+  <label for="pwd">Password:</label>
+  <p>
+  <input type="password" id="pwd" placeholder="Enter password" name="pswd">
+  <p>
+  <button type="submit">Submit</button>
+  <p>
+  
+</form>
+<div class = "a">
+    <a href="/questionnaire">Sign up</a>
+</div>
+</body>
+</html>

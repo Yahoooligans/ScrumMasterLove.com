@@ -4,6 +4,9 @@ var app = express();
 module.exports = app;
 
 app.get('/', function (request, response) {
+    var item = {
+
+    };
 
     // TODO: Initialize the query variable with a SQL query
     // that returns all the rows in the ‘store’ table
@@ -12,8 +15,9 @@ app.get('/', function (request, response) {
     db.any(query)
         .then(function (rows) {
             // render views/store/list.ejs template file
+            console.log(rows)
             response.render('profile/list', {
-                title: 'Profile',
+                title: 'users',
                 data: rows
             })
         })
@@ -21,7 +25,7 @@ app.get('/', function (request, response) {
             // display error message in case an error
             request.flash('error', err);
             response.render('profile/list', {
-                title: 'Profile',
+                title: 'users',
                 data: ''
             })
         })
