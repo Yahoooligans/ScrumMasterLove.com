@@ -31,6 +31,8 @@ app.use(session({
 }));
 app.use(flash());
 
+global.username = "a";
+global.password = "b";
 
 var index = require('./routes/index');
 var profile = require('./routes/profile');
