@@ -1,10 +1,9 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (request, response) {
+app.get('/', function (request, res) {
    // render the views/index.ejs template file
-   response.render('index', {title: 'Scrum Lovin'})
-   res.send('you just hit the homepage\n')
+   res.render('index', {title: 'Scrum Lovin'})
 });
 
 module.exports = app;
