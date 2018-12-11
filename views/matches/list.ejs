@@ -1,3 +1,5 @@
+<!-- This is profile's index.ejs-->
+
 <!--Including Header Partial-->
 <%- include ../layouts/header.ejs %>
 
@@ -9,26 +11,46 @@
     <p style="color:blue"><%- messages.success %></p>
 <% } %>
 
-<script type="text/javascript">
+<script type="text/javascript">z
     var err = <%- JSON.stringify(messages) %>;
     console.log(err);
 </script>
-
+<h1><%=username%></h1>
 <table border="0" width='60%'>
     <tr style='text-align:left; background-color:#CCC'>
+
+        <th>Score</th>
+        <th>Match</th>
         <th>Username</th>
     </tr>
-    <% if (data) { %>
-    <!-- Using a for-loop to loop over each row in the database.
-    The 'data' variable is passed from the store.js during the response.render function call -->
-        <% data.forEach(function(item){ %>
+        <% if (data) { %>
+    
+            <% data.forEach(function(item){ %>
+            <% if(item.id == 1)
+                score = item.score%>
+            <%if(item.id != 1) { %>
+                <%
+                if(item.score<=score){
+                    ratio = score/item.score
+                }
+                else{
+                    ratio = item.score/score
+                }
+                if(ratio >= 0.8){
+                    match = item.id
+                }
+
+                %>
             <tr>
+                <td><%= item.score %></td>
+                <td><%= item.id %></td>
                 <td><%= item.user_name %></td>
+                
             </tr>
+            <% } %>
         <% }) %>
     <% } %>
 </table>
-
 
 
 <!--Including Footer Partial-->
