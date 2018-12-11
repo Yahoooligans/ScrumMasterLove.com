@@ -4,8 +4,8 @@ const dbConfig = {
    host: 'localhost',
    port: 5432,
    database: 'scrumlove',
-   user: 'chasedudas',
-   password: 'Chase13' // TODO: Fill in your PostgreSQL password here.
+   user: 'postgres',
+   password: 'Kings1996' // TODO: Fill in your PostgreSQL password here.
                 // Use empty string if you did not set a password
 };
 

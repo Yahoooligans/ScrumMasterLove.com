@@ -23,7 +23,7 @@ app.get('/', function (request, response) {
             //user_name: request.sanitize('user_name').escape().trim()
         };
         // Running SQL query to insert data into the store table
-        db.any('SELECT id,score,user_name FROM users')
+        db.any('SELECT * FROM users')
             .then(function(results){
                 //request.flash('success', 'Successfully took user name!');
                 console.log(results)
@@ -36,7 +36,8 @@ app.get('/', function (request, response) {
             })
         .catch(function(err){
             response.render('matches/list',{
-                title: 'matches'
+                title: 'matches',
+                data: ''
             })
         })
 }
