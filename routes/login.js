@@ -4,20 +4,17 @@ var app = express();
 
 app.post('/', function (req, res) 
 {
-  var sid = req.sessionID;
-  var username = req.body.user;
-  var password = req.body.pass;
+  var username = req.body.username;
+  var password = req.body.psw;
 
-  var queryUser = 'SELECT * FROM users WHERE'
+  //console.log(username);
+  //console.log(password);
 
-  db.one(queryUser)
-  .then(function (row) {
-    
-  })
-  .catch(function (err) {
-    // display error message in case an error
-    request.flash('error', err);
-  })
+  this.username = username;
+  this.password = password;
+
+  console.log(this.username);
+  console.log(this.password);
   
   // Process the data received in req.body
   res.redirect('/');
