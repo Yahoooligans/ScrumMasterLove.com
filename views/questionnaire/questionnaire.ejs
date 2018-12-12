@@ -19,7 +19,7 @@
 </head>
 
 <!--Create a form to take input from user-->
-<form action="/questionnaire" method="post" name="form1" style="margin: 0 auto; width:250px;">
+<form action="/questionnaire" method="post" name="form1" style="margin: 0 auto auto 35%;  width:800px;">
     <label for="name">Name:</label>
 		  <p>
 		  <input type="text" id="name" placeholder="Enter full name" name= "full_name" value="<%= full_name %>">
@@ -46,60 +46,68 @@
 		  <input type="radio" name="gender" id="gender" value="male"> Male<br>
 		  <input type="radio" name="gender" id="gender" value="na"> Prefer not to answer<br>
 		  
-
+		<br> 
 		 <p>  What is the best methodology? </p>
 		  <input type="radio" id="q1" name="q1" value=1 > Agile Scrum<br>
 		  <input type="radio" id="q1" name="q1" value=2 > Waterfall<br>
 		  <input type="radio" id="q1" name="q1" value=3 > Critical Path Method<br>
 		  <input type="radio" id="q1" name="q1" value=4 > Kanban<br>
 		
-		
+		<br> 
 		 <p> Are you a certified scrum master? </p>
 		  <input type="radio" id="certified" name="q2" value=1> Yes<br>
 		  <input type="radio" id="certified" name="q2"value=2 > No<br>
 		  
+		<br> 
 		 <p> What artist is a good embodiment of what a scrum master is? </p>
 		  <input type="radio" id="artist" name="q3" value=1 > Eminem<br>
 		  <input type="radio" id="artist" name="q3" value=2 > Tom Petty<br>
 		  <input type="radio" id="artist" name="q3" value=3 > Snoop Dogg <br>
 		  <input type="radio" id="artist" name="q3" value=4 > Avicii<br>
-
+		
+		<br> 
 		 <p> What are the roles in scrum? </p>
 		  <input type="radio" id="roles" name="q4" value=1 > Product Owner, Scrum Master, Customer<br>
 		  <input type="radio" id="roles" name="q4" value=2 > Product Manager, Scrum Master, Development Team<br>
 		  <input type="radio" id="roles" name="q4" value=3 > Product Owner, Scrum Master, Delivery Team<br>
 		  <input type="radio" id="roles" name="q4" value=4 > Scrum Owner, Scrum Master, Scrum Team<br>
 		  
+		<br> 
 		  <p> What is your favorite activity of every day? </p>
 		  <input type="radio" id="activity" name="q5" value=1 > Sleeping<br>
 		  <input type="radio" id="activity" name="q5" value=2 > Working out<br>
 		  <input type="radio" id="activity" name="q5" value=3> Reading <br>
 		  <input type="radio" id="activity" name="q5" value=4> Holding daily scrums<br>
 		  
+		<br> 
 		  <p>How old were you when you got certified? </p>
 		  <input type="radio" id="certifiedage" name="q6" value=1 > 18-24<br>
 		  <input type="radio" id="certifiedage" name="q6" value=2 > 25-32<br>
 		  <input type="radio" id="certifiedage" name="q6" value=3> 33-40 <br>
 		  <input type="radio" id="certifiedage" name="q6" value=4> 40+<br>
 		  
+		<br> 
 		  <p>What language do you work with the most?</p>
 		  <input type="radio" id="language" name="q7" value=1 > C and all of its variants (C++, C#, C, etc)<br>
 		  <input type="radio" id="language" name="q7" value=2 > Python<br>
 		  <input type="radio" id="language" name="q7" value=3> HTML/CSS/Javascript<br>
 		  <input type="radio" id="language" name="q7" value=4> What is coding?<br>
 		  
+		<br> 
 		  <p>How long are your sprints? </p>
 		  <input type="radio" id="sprints" name="q8" value=1 > 1 Week<br>
 		  <input type="radio" id="sprints" name="q8" value=2 > 2 Week<br>
 		  <input type="radio" id="sprints" name="q8" value=3> 3 Week <br>
 		  <input type="radio" id="sprints" name="q8" value=4> 4 Week<br>
 		  
+		<br> 
 		  <p>One of your team members is talking a lot during your daily stand up meeting. What do you do?</p>
 		  <input type="radio" id="scenario1" name="q9" value=1 > Ignore them and continue the meeting hoping they'll get the message<br>
 		  <input type="radio" id="scenario1" name="q9" value=2 > Aggressively tell them to stop talking and contribute to the stand up<br>
 		  <input type="radio" id="scenario1" name="q9" value=3> Tell them to be quiet and hold them to the three questions <br>
 		  <input type="radio" id="scenario1" name="q9" value=4> Shame them in front of the entire team as an example<br>
 		  
+		<br> 
 		  <p>A team member comes to you asking for assistance as they are having troubles meeting their sprint goal. You: </p>
 		  <input type="radio" id="scenario2" name="q10" value=1 > Tell them to ask someone on the team for assistance<br>
 		  <input type="radio" id="scenario2" name="q10" value=2 > Assist them in any way that you can except for doing their job<br>
@@ -107,6 +115,7 @@
 		  <input type="radio" id="scenario2" name="q10" value=4> Extend the sprint for the entire team<br>
 		  <br>
 	
+		<br> 
 		<input type="submit" name="Submit" value="Submit"/>
 </form>
 
