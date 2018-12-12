@@ -19,6 +19,8 @@
         <th>Email</th>
         <th>Username</th>
         <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
     </tr>
     <% if (data) { %>
     <!-- Using a for-loop to loop over each row in the database.
@@ -28,6 +30,8 @@
                 <td><%= item.email %></td>
                 <td><%= item.user_name %></td>
                 <td><%= item.full_name %></td>
+                <td><%= item.gender %></td>
+                <td><%= item.age %></td>
             </tr>
         <% }) %>
     <% } %>

@@ -23,18 +23,17 @@ app.get('/', function (request, response) {
             //user_name: request.sanitize('user_name').escape().trim()
         };
         // Running SQL query to insert data into the store table
-        db.any('SELECT * FROM users')
+        db.any("SELECT * FROM users WHERE user_name = '" + this.username + "'" )
             .then(function(results){
                 //request.flash('success', 'Successfully took user name!');
                 console.log(results)
                 response.render('matches/list',{
                     title: 'matches',
-                    data: results,
-                    username: 'chase13',
-                    id: '1'
+                    data: results
                 })  
             })
         .catch(function(err){
+            console.log("Error quering the database for user")
             response.render('matches/list',{
                 title: 'matches',
                 data: ''
