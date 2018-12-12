@@ -35,7 +35,7 @@ CREATE TABLE "users" (
   "matches_id" integer REFERENCES matches(id),
   "full_name" varchar, 
   "email" varchar UNIQUE,
-  "user_name" varchar UNIQUE,
+  "user_name" text UNIQUE,
   "password" varchar UNIQUE,
   "gender" varchar,
   "age" varchar,
