@@ -7,7 +7,7 @@ app.get('/', function (request, response) {
 
     // TODO: Initialize the query variable with a SQL query
     // that returns all the rows in the ‘store’ table
-    var query = 'SELECT * FROM users';
+    var query = "SELECT * FROM users WHERE user_name = '" + this.username + "'" ;
 
     db.any(query)
         .then(function (rows) {

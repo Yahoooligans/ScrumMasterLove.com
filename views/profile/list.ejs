@@ -1,6 +1,13 @@
 <!--Including Header Partial-->
 <%- include ../layouts/header.ejs %>
 
+<style>
+td {
+    text-align: center;
+    padding: 50px;
+
+}
+</style>
 <!--Using if-check to see if an error occurred and displaying appropriate message-->
 <% if (messages.error) { %>
     <p style="color:red"><%- messages.error %></p>
@@ -14,11 +21,13 @@
     console.log(err);
 </script>
 
-<table border="0" width='60%'>
-    <tr style='text-align:left; background-color:#CCC'>
+<table border=5px width='100%'>
+    <tr style='text-align:center; background-color:#CCC'>
         <th>Email</th>
         <th>Username</th>
         <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
     </tr>
     <% if (data) { %>
     <!-- Using a for-loop to loop over each row in the database.
@@ -28,6 +37,8 @@
                 <td><%= item.email %></td>
                 <td><%= item.user_name %></td>
                 <td><%= item.full_name %></td>
+                <td><%= item.gender %></td>
+                <td><%= item.age %></td>
             </tr>
         <% }) %>
     <% } %>
