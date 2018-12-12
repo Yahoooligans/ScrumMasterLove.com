@@ -82,7 +82,7 @@ var errors = request.validationErrors();
 		this.password = password;
 		request.flash('success', 'Successfully created a user!');
                 // render to profile
- 		response.render('/profile')
+ 		response.redirect('/');
             }).catch(function (err) {
             request.flash('error', err);
             // render views/store/add.ejs
