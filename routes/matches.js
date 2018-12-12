@@ -30,7 +30,9 @@ app.get('/', function (request, response) {
                 response.render('matches/list',{
                     title: 'matches',
                     data: results,
-                    username: this.username
+                    username: this.username,
+                    id: this.ID,
+                    score: ''
                 })  
             })
         .catch(function(err){
