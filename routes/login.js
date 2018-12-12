@@ -16,33 +16,30 @@ app.post('/', function (req, res)
 
   this.username = username;
   this.password = password;
-
   //console.log(this.username);
   //console.log(this.password);
 
-/*
+  var query = "SELECT * FROM users WHERE user_name = '" + this.username + "'" ;
+
   //If username is in the table then continue, if not error
-   db.any("SELECT * FROM users WHERE user_name = '" + this.username + "' AND password = '" + this.password + "'" )
+   db.one(query)
         .then(function(results)
-            {
-                request.flash('success', 'Successfully took user name!');
-                console.log(results);
-                res.redirect('/');
-                 
-            })
-        .catch(function(err)
         {
-            console.log("Error quering the database for user");
-            req.flash("messages", { "error" : "Invalid username or password" });
-            this.username = oldusername;
-            this.password = oldpassword;
-            res.redirect('/');
+          console.log(results);
+          res.redirect('/'); 
         })
-*/
+        .catch(function(error)
+        {
+          this.username = oldusername;
+          this.password = oldpassword;
+          console.log("Error quering the database for user");
+          res.redirect('/');
+        })
+
   //If username is in table and password matches redirect and success, else error 
   
   // Process the data received in req.body
-  res.redirect('/');
+  //res.redirect('/');
 });
 
 module.exports = app;
