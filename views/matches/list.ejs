@@ -27,12 +27,12 @@
             
             <% data.forEach(function(item){ %>
             
-            <% if(item.id == this.ID)
+            <% if(item.user_name == this.username)
                 score = item.score%>
                <% })%>
             <%console.log(score);%>
             <% data.forEach(function(item){ %>
-            <%if(item.id != this.ID) { %>
+            <%if(item.user_name != this.username) { %>
                 <%
                 if(item.score<=score){
                     ratio = item.score/score
