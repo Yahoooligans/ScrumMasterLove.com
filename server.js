@@ -46,7 +46,7 @@ app.use('/login', login);
 app.use('/matches', matches);
 
 
-var port = 4000;
+var port = (process.env.PORT || 4000);
 app.listen(port, function () {
     console.log('Server running on http://localhost:' + port)
 });
