@@ -14,8 +14,7 @@ To bring an easy and efficient way to bring love into scrum master’s lives.
 ## Build status
 [![Build Status](https://travis-ci.org/Yahoooligans/ScrumMasterLove.com.svg?branch=master)](https://travis-ci.org/Yahoooligans/ScrumMasterLove.com)
  
-## Screenshots
-Include logo/demo screenshot etc.
+![](http://webapp1.dlib.indiana.edu/virtual_disk_library/index.cgi/4909942/FID2663/common/internet/us.yimg.com/i/ligans/main3b.gif)
 
 ## Tech/framework used
 <b>Built with</b>
@@ -34,7 +33,7 @@ Include logo/demo screenshot etc.
 What really sets apart from other trash dating sites, like Christian Mingle or Tinder, is our dynamic login page in the navigation bar of the web app. We are commited to making sure our scrum masters are happy with the features we have to offer. We are a feedback inspired development team so our users matter alot to us. 
 
 ## Code Example
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+*screenshots to come*
 
 ## Installation
 
@@ -54,21 +53,12 @@ Show what the library does as concisely as possible, developers should be able t
 - [Supertest](https://www.npmjs.com/package/supertest)
 
 ## Tests
-Describe and show how to run the tests with code examples.
+The tests are run by Travis CI. Our unit testing makes sure our routes can handle both GET and POST requests.
 
 ## How to use?
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
-
-## Contribute
-
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
-
-## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
-
-#### Anything else that seems useful
+1. Create an account with us by filling out the questionare
+2. View how similar you are  to other scrum masters with the matches tab
+3. View your information under our profile tab 
 
 ## License
-A short snippet describing the license (MIT, Apache etc)
-
-MIT © [Yourname]()
+N/A
