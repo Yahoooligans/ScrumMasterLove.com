@@ -74,7 +74,6 @@ The tests are run by Travis CI. Our unit testing makes sure our routes can handl
 │   └── style.css
 ├── test
 │   └── test.js
-├── tree
 └── views
     ├── index.ejs
     ├── layouts
