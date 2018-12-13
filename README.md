@@ -55,6 +55,38 @@ What really sets apart from other trash dating sites, like Christian Mingle or T
 ## Tests
 The tests are run by Travis CI. Our unit testing makes sure our routes can handle both GET and POST requests.
 
+## File Tree
+```
+.
+├── README.md
+├── database.js
+├── main3b.gif
+├── package-lock.json
+├── package.json
+├── routes
+│   ├── index.js
+│   ├── login.js
+│   ├── matches.js
+│   ├── profile.js
+│   └── questionnaire.js
+├── server.js
+├── styles
+│   └── style.css
+├── test
+│   └── test.js
+├── tree
+└── views
+    ├── index.ejs
+    ├── layouts
+    │   ├── footer.ejs
+    │   └── header.ejs
+    ├── matches
+    │   └── list.ejs
+    ├── profile
+    │   └── list.ejs
+    └── questionnaire
+        └── questionnaire.ejs
+```
 ## How to use?
 1. Create an account with us by filling out the questionare
 2. View how similar you are  to other scrum masters with the matches tab
